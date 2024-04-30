@@ -1,0 +1,25 @@
+<div id="<%= dom_id response %>">
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Question</th>
+      <th>Tool</th>
+      <th>Model</th>
+      <th>Created at</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @user.user_name if ! @user.nil? %></td>
+      <td><%= @question.query_text if ! @question.nil? %></td>
+      <td><%= @tool.tool_name if ! @tool.nil? %></td>
+      <td><%= @model.modelname if ! @model.nil? %></td>
+      <td><%= response.created_at %></td>
+  </tr>
+  </tbody>
+</table>
+<pre>
+<%= response.response_text %>
+</pre>
+</div>

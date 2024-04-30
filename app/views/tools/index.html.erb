@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+<h1>Large Language Models (LLMs)</h1>
+
+<div id="tools">
+  <table cellpadding="2" class="display compact dataTable" id="example">
+    <thead>
+      <tr>
+        <th>LLM name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @tools.each do |tool| %>
+        <tr>
+          <td><%= tool.tool_name %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<br/>
+<%= link_to "New LLM", new_tool_path %>

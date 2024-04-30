@@ -1,0 +1,32 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>LLM Queries</h1>
+
+<div id="jobs">
+  <table>
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Question</th>
+        <th>Model</th>
+        <th>Running?</th>
+        <th>Done?</th>
+        <th>Run time</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @jobs.each do |job| %>
+        <tr>
+          <td><%= @users[ job.user_id ].user_name %></td>
+          <td><%= @questions[ job.question_id ].query_text %></td>
+          <td><%= @models[ job.model_id ].model_name %></td>
+          <td><%= job.is_running %></td>
+          <td><%= job.is_done %></td>
+          <td><%= job.run_time %></td>
+          <td><%= link_to "Show", job %></td>
+        </tr>
+      <% end -%>
+    </tbody>
+  </table>
+</div>

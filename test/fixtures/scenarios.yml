@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  scenario_name: MyString
+  scenario_title: MyString
+  description: MyString
+  has_guard: false
+  is_sun_blocking: false
+
+two:
+  scenario_name: MyString
+  scenario_title: MyString
+  description: MyString
+  has_guard: false
+  is_sun_blocking: false

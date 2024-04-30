@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+<div class="center">
+  <%= form_for(@attachment, :html => {:multipart=>true}) do |f| %>
+    <table class="pretty pretty-first-header">
+      <thead></thead>
+      <tbody>
+          <tr style="height:25px;">
+              <td>Select file</td>
+              <td>
+                <div class="field">
+                  <%= f.file_field("datafile", accept: ".txt", size: 30, autocomplete: :off, required: true) %>
+                </div>
+              </td>
+          </tr>
+          <tr style="height:25px;">
+            <td></td>
+            <td><%= f.submit "Upload data", id: 'upload_btn' %></td>
+          </tr>
+      </tbody>
+    </table>
+  <% end -%>
+</div>

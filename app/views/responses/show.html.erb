@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @response %>
+
+<div>
+  <table>
+    <thead></thead>
+    <tbody>
+      <tr>
+        <td><%= link_to "Back to responses", responses_path %></td>
+        <td><%= button_to "Delete this response", @response, method: :delete %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

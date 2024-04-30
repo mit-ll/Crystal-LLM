@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IdPrism</title>
+  <!-- %= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true % -->
+  <%= stylesheet_link_tag('application.css') %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!-- %= yield :javascripts % -->
+</head>
+<% if user_signed_in? -%>
+  <body>
+		<%= render :partial => 'layouts/title' %>
+		<%= render :partial => 'layouts/buttons' %>
+		<%= render :partial => 'layouts/breadcrumbs' unless @breadcrumbs.nil? %>
+		<div class="prism_container">
+			<%= render :partial => 'layouts/flash' %>
+			<%= yield %>
+			<div class="devise_footer">
+			</div>
+		</div>
+	</body>
+<% else %>
+  <body id="sign_in_page">
+    <div id="sign_in_container">
+			<div class="devise_header">
+				<%= image_tag('IdPrism.png', alt: '', width: 800, height: 400) %>
+			</div>
+			<%= yield %>
+			<div class="devise_footer">
+			</div>
+		</div>
+  </body>
+<% end %>  
+</html>

@@ -1,0 +1,500 @@
+   19  rm -rf ~/.cache/huggingface/hub/tmp*
+   20  ls
+   21  ls models--meta-llama--Llama-2-7b-chat-hf > i1
+   22  vi docker_run.cmds 
+   23  ls > i1
+   24  vi i1
+   25  vi docker_run.cmds 
+   26  ls io
+   27  ls io/hub
+   28  ./docker_run.cmds 
+   29  ls io
+   30  ls *.py
+   31  ls
+   32  ls models--meta-llama--Llama-2-7b-chat-hf
+   33  ls models--meta-llama--Llama-2-7b-chat-hf/blobs
+   34  ls *.sqsh
+   35  history | grep mksqu
+   36  mksquashfs models--meta-llama--Llama-2-7b-chat-hf Llama-2-7b-chat-hf.sqsh
+   37  docker images
+   38  docker save 94de36fc05a6 > llama2_latest.tar
+   39  cat sing.cmds
+   40  htop
+   41  nvidia-smi
+   42  cat sing.cmds
+   43  htop
+   44  cd ../falcon/
+   45  cat sing.cmds
+   46  ./sing.cmds
+   47  htop
+   48  cd ../llama2
+   49  ls
+   50  sftp txg-login.llgrid.ll.mit.edu
+   51  exit
+   52  cd /data/da23452/llm/llama2
+   53  ls *.def
+   54  vi llama2.def
+   55  sudo su -
+   56  sftp txg-login.llgrid.ll.mit.edu
+   57  exit
+   58  cd /data/da23452/llm/llama2
+   59  vi Dockerfile 
+   60  docker build . -t llama2:latest
+   61  cp ../falcon/dependencies/entrypoint.sh dependencies/
+   62  vi dependencies/entrypoint.sh 
+   63  docker build . -t llama2:latest
+   64  cp ../falcon/dependencies/apt.conf dependencies/
+   65  cp ../falcon/dependencies/wgetrc dependencies/
+   66  docker build . -t llama2:latest
+   67  vi Dockerfile 
+   68  cp requirements.txt dependencies/
+   69  docker build . -t llama2:latest
+   70  vi sing.cmds
+   71  ls *.sqsh
+   72  vi sing.cmds
+   73  ./sing.cmds
+   74  vi sing.cmds
+   75  ./sing.cmds
+   76  htop
+   77  nvidia-smi
+   78  htop
+   79  nvidia-smi
+   80  htop
+   81  nvidia-smi
+   82  htop
+   83  cd ../mistralai/
+   84  ls
+   85  cat sing.cmds
+   86  ./sing.cmds
+   87  ls
+   88  sftp txg-login.llgrid.ll.mit.edu
+   89  ssh txg-login.llgrid.ll.mit.edu
+   90  ls *.sif
+   91  sftp txg-login.llgrid.ll.mit.edu
+   92  cd /data/da23452/llm/falcon
+   93  sftp txg-login.llgrid.ll.mit.edu
+   94  sudo su -
+   95  sudo su -
+   96  sudo su -
+   97  exit
+   98  sudo su -
+   99  history
+  100  sudo su -
+  101  cd /data/da23452/llm/falcon/
+  102  vi Dockerfile 
+  103  cd ../mistralai/
+  104  vi Dockerfile 
+  105  cp -R ../llama2/io .
+  106  cd ../llms
+  107  cp -R ../llama2/io .
+  108  ls io
+  109  rm io/example_*
+  110  ls ../llama2/*.cmds
+  111  cat sing.cmds
+  112  vi sing.cmds
+  113  ./sing.cmds
+  114  ls *.sqsh
+  115  cp ../llama2/Llama-2-7b-chat-hf.sqsh .
+  116  rm llama-2-7b-chat.sqsh
+  117  ./sing.cmds 
+  118  cp sing.cmds jupyter.cmds
+  119  vi jupyter.cmds 
+  120  ./jupyter.cmds 
+  121  cd /data/da23452/llm
+  122  ls
+  123  mkdir llms
+  124  cd llms
+  125  cp ../llama2/*.def .
+  126  cp ../llama2/Dockerfile .
+  127  cp -R ../llama2/dependencies/ .
+  128  ls ../llama2
+  129  cp ../llama2/llama2_chat.py chat.py
+  130  cp ../llama2/InputFile.py .
+  131  cp ../llama2/sing.cmds .
+  132  cp ../llama2/llama-2-7b-chat.sqsh .
+  133  cp ../llama2/token.txt .
+  134  cp ../llama2/questions.txt .
+  135  ls
+  136  mv llama2.def llms.def
+  137  vi llms.def
+  138  sudo su -
+  139  cd /data/da23452/llm/falcon/
+  140  ls
+  141  vi falcon.def
+  142  cd ..
+  143  ls
+  144  cd mistralai/
+  145  vi mistral.def 
+  146  cd dependencies/
+  147  ls
+  148  cp mistral_requirements.txt ../../llms/dependencies/
+  149  cd ../../falcon/dependencies/
+  150  ls
+  151  cp falcon_requirements.txt ../../llms/dependencies/
+  152  cd ../../llms/dependencies/
+  153  ls
+  154  diff mistral_requirements.txt falcon_requirements.txt 
+  155  grep transfomers *
+  156  grep transf *
+  157  ls
+  158  mv requirements.txt llms_requirements.txt
+  159  vi llms_requirements.txt 
+  160  sort llms_requirements.txt > a
+  161  mv a llms_requirements.txt 
+  162  ls
+  163  rm mistral_requirements.txt 
+  164  rm falcon_requirements.txt 
+  165  rm gradio-ui.py 
+  166  ls
+  167  rm llama2_chat.py
+  168  vi llama2_requirements.txt 
+  169  rm llama2_requirements.txt 
+  170  ls
+  171  rm example_*
+  172  ls
+  173  cd ..
+  174  ls
+  175  cd ../..
+  176  ls
+  177  cd ML_Tools/
+  178  ls *.def
+  179  vi ml_tools.def
+  180  cd ..
+  181  cd llm/llms
+  182  vi Dockerfile 
+  183  docker build . -t llms:latest
+  184  vi Dockerfile 
+  185  docker build . -t llms:latest
+  186  cd /data/APL/ADOM_2.7a
+  187  cd /data/da23452/llm
+  188  cd llms
+  189  docker images
+  190  docker save 0614af68f590 > llms.tar
+  191  cd /data/da23452/llm
+  192  cd llms
+  193  ls *.sif
+  194  sftp txg-login.llgrid.ll.mit.edu
+  195  cd /data/da23452/llm/llms
+  196  history | grep save
+  197  docker save 0614af68f590 > llms.tar
+  198  sftp txg-login.llgrid.ll.mit.edu
+  199  exit
+  200  cd /data/da23452
+  201  ls
+  202  cd llm
+  203  cd llms
+  204  sudo su -
+  205  cd .jupyter/
+  206  ls
+  207  cd /data/da23452/llm/llms
+  208  ls io
+  209  ls ..
+  210  ls ../llama2
+  211  ls ../llama2/io
+  212  ls ../falcon/
+  213  ls ../falcon/io
+  214  cp ../falcon/hist.txt io
+  215  cp ../falcon/io/hist.txt io
+  216  vi io/hist.txt 
+  217  vi ../falcon/io/h3.txt 
+  218  cp ../falcon/io/h3.txt .
+  219  cp h3.txt io
+  220  rm io/hist.txt
+  221  vi io/h3.txt
+  222  cat io/questions.txt
+  223  vi io/h3.txt 
+  224  vi io/questions.txt
+  225  cat notebook2.cmds 
+  226  cd /data/da23452/
+  227  ls
+  228  cd llm
+  229  ls
+  230  cd llms
+  231  ls
+  232  ls *.def
+  233  vi llms.def
+  234  vi Dockerfile 
+  235  vi dependencies/llms_requirements.txt 
+  236  docker build . -t llms:latest
+  237  ls
+  238  sftp ait-dev-01
+  239  ls
+  240  vi docker-compose.yml 
+  241  vi .env
+  242  vi SPDX.spdx 
+  243  env | grep proxy
+  244  history | grep docker
+  245  docker build . -t llms:latest
+  246  docker images
+  247  docker image rm -f 0614af68f590 
+  248  history | grep notebook
+  249  vi Dockerfile 
+  250  ls 
+  251  ls dependencies/
+  252  vi dependencies/entrypoint.sh 
+  253  docker run -it llms:latest jupyter notebook
+  254  docker run -it llms:latest jupyter notebook --allow-root
+  255  history > notebook_run.cmds
+  256  vi notebook_run.cmds 
+  257  ls *.cmds
+  258  cat sing.cmds
+  259  singularity run --nv -B io/:/io/ -B Llama-2-7b-chat-hf.sqsh:/io/hub/models--meta-llama--Llama-2-7b-chat-hf:image-src=/ llms_box jupyter notebook --allow-root
+  260  singularity run --nv -B io/:/io/ -B Llama-2-7b-chat-hf.sqsh:/io/hub/models--meta-llama--Llama-2-7b-chat-hf:image-src=/ llms_box jupyter notebook --allow-root --ip='*' --NotebookApp.token='' --NotebookApp.password='test'
+  261  singularity run --nv -B io/:/io/ -B Llama-2-7b-chat-hf.sqsh:/io/hub/models--meta-llama--Llama-2-7b-chat-hf:image-src=/ llms_box jupyter notebook --allow-root --ip='*' --NotebookApp.token='' --NotebookApp.password=''
+  262  ls
+  263  ls hub
+  264  ls io
+  265  cp InputFile.py io
+  266  history > notebook.cmds
+  267  vi notebook.cmds
+  268  ls fal*
+  269  ls ../falcon/
+  270  cp ../falcon/falcon-7b.sqsh .
+  271  ls
+  272  ls falcon-7b.sqsh > i1
+  273  cp notebook.cmds notebook2.cmds
+  274  vi notebook2.cmds 
+  275  ./noteboook2.cmds
+  276  chmod +x *.cmds
+  277  ./notebook2.cmds 
+  278  cat notebook2.cmds 
+  279  vi notebook2.cmds 
+  280  ls io
+  281  grep python *.cmds
+  282  cd /data/da23452/llm
+  283  ls
+  284  cd llms
+  285  ls
+  286  cd io
+  287  ls
+  288  ls *.py
+  289  vi llama2_cli.py 
+  290  cd ../../falcon/io
+  291  ls
+  292  ls *py
+  293  vi falcon_chat4.py 
+  294  cd /data/da23452/llm
+  295  ls
+  296  cd mistralai/
+  297  ls
+  298  ls *.cmds
+  299  cat test.cmds
+  300  cat sing.cmds
+  301  ./sing.cmds
+  302  cd /data/da23452/llm
+  303  ls
+  304  cd llms
+  305  ls
+  306  ls *.cmds
+  307  cat sing.cmds
+  308  ./sing.cmds
+  309  vi io/llama2_cli.py 
+  310  cd /data/da23452/llm/llms
+  311  cd io/hub
+  312  ls
+  313  ls ~/.cache/huggingface/hub/
+  314  mv ~/.cache/huggingface/hub/mod* .
+  315  ls
+  316  rm -rf models--mistralai--Mixtral-8x7B-v0.1
+  317  ls -l *--llama*
+  318  ls *--Llama*
+  319  ls models--meta-llama--Llama-2-7b-chat-hf
+  320  rmdir models--meta-llama--Llama-2-7b-chat-hf
+  321  ls mod*
+  322  rm -rf models--mistralai--Mistral-8x7B-v0.1 models--tiiuae--falcon-7b
+  323  ls
+  324  cd /data/da23452/llms
+  325  cd /data/da23452/llm
+  326  cd falcon/
+  327  ls io/hub
+  328  ls -l io/hub/models--tiiuae--falcon-7b/
+  329  cd ../llama2/
+  330  ls -l io/hub/models--meta-llama--*
+  331  rmdir io/hub/models--meta-llama--Llama-2-7b-chat-hf
+  332  cd ../mistralai/
+  333  ls -l io/hub/models--m*
+  334  rmdir io/hub/models--meta-llama--Llama-2-7b-chat-hf
+  335  ls
+  336  ls io/hub
+  337  cd /data/da23452/llm/llms
+  338  vi Dockerfile 
+  339  vi dependencies/entrypoint.sh 
+  340  cd /data/da23452/llm/llms
+  341  cd io/hub
+  342  ls
+  343  cd ../../../mistralai
+  344  mv io/hub/models--mistralai--Mistral-7B-v0.1/ ../llms/io/hub
+  345  cd ../llms/io/hub
+  346  ls
+  347  cd ../..
+  348  ls ../falcon/
+  349  ls ../falcon/models--tiiuae--falcon-7b
+  350  mv ../falcon/models--tiiuae--falcon-7b io/hub/
+  351  cd io/hub
+  352  ls
+  353  cd ..
+  354  tar -xvf llm_ui.tar
+  355  cd llm_ui
+  356  bundle install
+  357  vi Gemfile
+  358  bundle update
+  359  vi Gemfile
+  360  bundle update
+  361  vi Gemfile
+  362  bundle update
+  363  cd ..
+  364  rm -rf llm_ui
+  365  ls
+  366  ls *.def
+  367  vi Dockerfile 
+  368  docker build . -t llms:latest
+  369  tar -xvf llm_ui.tar
+  370  vi llm_ui/Gemfile
+  371  rm llm_ui.tar
+  372  tar -cf llm_uitar llm_ui
+  373  docker build . -t llms:latest
+  374  vi Dockerfile 
+  375  docker build . -t llms:latest
+  376  vi Dockerfile 
+  377  ls -l llm_ui.tar
+  378  tar -cf llm_ui.tar llm_ui
+  379  docker build . -t llms:latest
+  380  vi Dockerfile 
+  381  docker build . -t llms:latest
+  382  vi Dockerfile 
+  383  docker build . -t llms:latest
+  384  cd /data/da23452/llm/llms
+  385  ls
+  386  vi llms.def
+  387  ls *.cmds
+  388  sudo su -
+  389  exit
+  390  cd /data/da23452/llm
+  391  cd llms
+  392  cat box.cmds
+  393  ls *.cmds
+  394  cat sing.cmds
+  395  grep docker *.cmds
+  396  cd ..
+  397  grep docker */*.cmds
+  398  cd /data/da23452/llm/llms
+  399  exit
+  400  ls /S
+  401  cd /S
+  402  rm -rf llm_ui
+  403  cp /io/llm_ui.tar .
+  404  tar -xvf llm_ui.tar
+  405  cd llm_ui
+  406  rails s
+  407  vi Gemfile
+  408  rails s
+  409  bundle install
+  410  rails s
+  411  rails s -b 0.0.0.0
+  412  pwd
+  413  vi app/views/questions/show.json.jbuilder 
+  414  cd app/views/questions/
+  415  ls
+  416  vi _question.json.jbuilder 
+  417  pwd
+  418  cd ../..
+  419  rails s
+  420  rails s -b 0.0.0.0
+  421  pwd
+  422  vi views/questions/show.html.erb 
+  423  vi controllers/questions_controller.rb 
+  424  vi views/questions/show.html.erb 
+  425  vi controllers/questions_controller.rb 
+  426  vi controllers/application_controller.rb 
+  427  cd ..
+  428  vi config/routes.rb 
+  429  cd app
+  430  vi views/questions/show.html.erb 
+  431  vi helpers/ask.rb 
+  432  ls /io
+  433  python /io/llama2_cli.py "How to cook pasta?"
+  434  python /io/llama2_cli.py "How to cook pasta?" > a.o
+  435  vi a.o
+  436  pwd
+  437  cd /io
+  438  ls *.py
+  439  cp llama2_cli.py llms_cli.py
+  440  vi llms_cli.py
+  441  grep model_id llama2_cli.py
+  442  python /io/llms_cli.py "meta-llama/Llama-2-7b-chat-hf" "How to cook pasta?" > a.o
+  443  vi a.o
+  444  vi /io/llm_ui/app/helpers/ask.rb
+  445  vi /S/llm_ui/app/helpers/ask.rb
+  446  ls hub
+  447  cd /S/llm_ui/db/migrate/
+  448  ls
+  449  vi 20240111200500_init_data.rb
+  450  cd ..
+  451  pwd
+  452  cd ..
+  453  vi config/database.yml 
+  454  rake db:migrate
+  455  vi Gemfile
+  456  bundle install
+  457  rake db:migrate
+  458  ping ait-dev-02.llan.ll.mit.edu
+  459  vi config/database.yml 
+  460  rake db:migrate
+  461  vi config/database.yml 
+  462  rake db:migrate VERSION=0
+  463  rake db:migrate
+  464  history
+  465  rails s -b 0.0.0.0
+  466  pwd
+  467  vi app/helpers/ask.rb 
+  468  pwd
+  469  rails s -b 0.0.0.0
+  470  vi app/helpers/ask.rb 
+  471  rails s -b 0.0.0.0
+  472  pwd
+  473  cd ..
+  474  ls
+  475  rm llm_ui.tar
+  476  tar -cf llm_ui.tar llm_ui
+  477  mv llm_ui.tar /io
+  478  history
+  479  quit
+  480  exit
+  481  cd /data/da23452/llm
+  482  grep model_id */io/*.py
+  483  ping ait-dev-01
+  484  exit
+  485  cd /data/da23452/llm/llms
+  486  ls
+  487  grep box *.cmds
+  488  cp box.cmds box_dev.cmds
+  489  vi box_dev.cmds
+  490  chmod +x box_dev.cmds
+  491  cp llm_ui.tar io
+  492  cat box_dev.cmds 
+  493  vi box_dev.cmds 
+  494  ./box_dev.cmds 
+  495  ls io
+  496  vi box_dev.cmds 
+  497  ./box_dev.cmds 
+  498  cat box_dev.cmds
+  499  cd io
+  500  exit
+  501  pwd
+  502  cd /S/llm_ui
+  503  vi config/database.yml 
+  504  rake db:migrate
+  505  cat config/database.yml 
+  506  rake db:migrate
+  507  cd db/migrate/
+  508  ls
+  509  vi 20240111200500_init_data.rb
+  510  cd ../..
+  511  rake db:migrate VERSION=0
+  512  rake db:migrate 
+  513  rake db:migrate RAILS_ENV=production
+  514  vi config/database.yml 
+  515  rake db:migrate RAILS_ENV=production
+  516  vi config/database.yml 
+  517  rake db:migrate RAILS_ENV=production
+  518  history > production.cmds

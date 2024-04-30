@@ -1,0 +1,7 @@
+<p style="color: green"><%= notice %></p>
+<h1>Questions</h1>
+
+<%= render "questions", questions: @questions, selected_question: nil %>
+<br/>
+<%= link_to "New question", new_question_path %>
+<%= link_to "Download Questions & Responses", all_question_path(0), :method => :all, :action => :all %></td>

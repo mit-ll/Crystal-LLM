@@ -1,0 +1,27 @@
+<%= form_with(model: chain) do |form| %>
+  <% if chain.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(chain.errors.count, "error") %> prohibited this chain from being saved:</h2>
+
+      <ul>
+        <% chain.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :chain_order, style: "display: block" %>
+    <%= form.number_field :chain_order %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

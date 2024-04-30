@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+<h1>Users</h1>
+
+<div id="users">
+  <table cellpadding="2" class="display compact dataTable" id="example">
+    <thead>
+      <tr>
+        <th>User name</th>
+        <th>Questions</th>
+        <th>Select</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.user_name %></td>
+          <td><%= link_to "See", user %></td>
+          <td><%= button_to "Select", {:controller => "users", :action => "select", :id => user.id}, :method => :post %></td>
+        </tr>
+      <% end -%>
+    </tbody>
+  </table>
+</div>
+<br/>
+<%= link_to "New user", new_user_path %>

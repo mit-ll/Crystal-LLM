@@ -1,0 +1,38 @@
+<%= form_with(model: question) do |form| %>
+  <% if question.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(question.errors.count, "error") %> prohibited this question from being saved:</h2>
+
+      <ul>
+        <% question.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <table>
+      <thead></thead>
+      <tbody>
+        <tr>
+          <td>Question(s) - one per line</td>
+        </tr><tr>
+          <td>Chain questions? <%= check_box_tag("chain", value=true, checked= false ) %></td>
+        </tr><tr>
+          <td><%= form.text_area :query_text, :size => "120x10" %></td>
+        </tr><tr>
+          <td><%= collection_select :template, :template, @templates, :id, :template_text, prompt: "Optional Template" %></td>
+        </tr><tr>
+          <td>Optional new template</td>
+        </tr><tr>
+          <td><%= text_area_tag :template_text, nil, :size => "120x6" %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br/>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

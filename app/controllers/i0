@@ -1,0 +1,6 @@
+
+  #############################################################################
+  def download
+    # send_data @attachment.file_binary, :filename => @attachment.name, :type => @attachment.content_type
+  end  # download
+

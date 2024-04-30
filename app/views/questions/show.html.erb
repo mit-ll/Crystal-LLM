@@ -1,0 +1,68 @@
+<p style="color: green"><%= notice %></p>
+<%= form_tag(query_question_path, method: 'post') do %>
+
+<div id="questions">
+  <table border="2">
+    <thead>
+      <tr>
+        <th align="center">User</th>
+        <% if ! @question.chain_id.nil? -%>
+          <th></th>
+        <% end -%>
+        <th align="left">Question</th>
+      </tr>
+    </thread>
+    <tbody>
+        <tr>
+          <td align="center"><%= @user.user_name if ! @user.nil? %></td>
+          <% if ! @question.chain_id.nil? -%>
+            <td>
+              <%= @question.chain_id %>.<%= @question.chain_order %>
+            </td>
+          <% end -%>
+          <td><%= @question.query_text %></td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+<% if ! @template.nil? -%>
+  <table border="2">
+    <thead>
+      <tr>
+        <th>Template</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @template.template_text %></td>
+      </tr>
+    </tbody>
+  </table>
+<% end -%>
+<br/>
+<div>
+  <%= link_to "Edit this question", edit_question_path(@question) %>
+  <%= link_to "Download", :id => @question.id, :method => :download, :action => :download %>
+  <%= link_to "Download chain", :id => @question.id, :method => :chain_download, :action => :chain_download %>
+</div>
+<table>
+  <thead></thead>
+  <tbody>
+    <tr>
+      <td><%= collection_select :llm_model, :llm_model, @models, :id, :modelname, prompt: "Select LLM model" %></td>
+      <td><%= button_to "Run LLM", :id => @question.id, :method => :query, :action => :query %></td>
+      <td><%= collection_select :model, :model, @chain_models, :id, :modelname, prompt: "Select LLM model for chaining" %></td>
+      <td><%= submit_tag 'Run LLM chain' %></td>
+    </tr>
+  </tbody>
+</table>
+<% if ! @questions.nil? -%>
+  <%= render "questions", questions: @questions, selected_question: @question %>
+<% end -%>
+<%= render "form2", question: @add_questions %>
+<br/>
+<% @responses.each do |response| -%>
+  <%= render "response", response: response %>
+<% end -%>
+
+<% end -%>

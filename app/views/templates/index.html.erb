@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+<h1>Templates</h1>
+
+<div id="templates">
+  <table class="display compact dataTable" id="example" border="1">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Template</th>
+        <th></th>
+      </tr>
+    </thread>
+    <tbody>
+      <% @templates.each do |template| -%>
+        <tr>
+          <td align="center"><%= @users[ template.user_id ] %></td>
+          <td><%= template.template_text %></td>
+          <td><%= link_to "Show", template %></td>
+        </tr>
+      <% end -%>
+    </tbody>
+  </table>
+</div>
+
+<%= link_to "New template", new_template_path %>

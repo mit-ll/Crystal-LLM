@@ -1,0 +1,30 @@
+<%= form_with(model: question) do |form| %>
+  <% if question.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(question.errors.count, "error") %> prohibited this question from being saved:</h2>
+
+      <ul>
+        <% question.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <table>
+      <thead></thead>
+      <tbody>
+        <tr>
+          <td>Add question(s) - one per line</td>
+        </tr><tr>
+          <td><%= form.text_area :query_text, :size => "120x10" %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br/>
+  <div>
+    <%= form.submit "Add question(s)" %>
+  </div>
+<% end %>

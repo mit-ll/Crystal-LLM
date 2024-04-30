@@ -1,0 +1,62 @@
+<%= form_with(model: job) do |form| %>
+  <% if job.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+        <% job.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :question_id, style: "display: block" %>
+    <%= form.number_field :question_id %>
+  </div>
+
+  <div>
+    <%= form.label :template_id, style: "display: block" %>
+    <%= form.number_field :template_id %>
+  </div>
+
+  <div>
+    <%= form.label :model_id, style: "display: block" %>
+    <%= form.number_field :model_id %>
+  </div>
+
+  <div>
+    <%= form.label :is_running, style: "display: block" %>
+    <%= form.check_box :is_running %>
+  </div>
+
+  <div>
+    <%= form.label :is_done, style: "display: block" %>
+    <%= form.check_box :is_done %>
+  </div>
+
+  <div>
+    <%= form.label :start_time, style: "display: block" %>
+    <%= form.datetime_field :start_time %>
+  </div>
+
+  <div>
+    <%= form.label :run_time, style: "display: block" %>
+    <%= form.datetime_field :run_time %>
+  </div>
+
+  <div>
+    <%= form.label :created_at, style: "display: block" %>
+    <%= form.datetime_field :created_at %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

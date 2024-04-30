@@ -1,0 +1,30 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Responses</h1>
+
+<div id="responses">
+  <table cellpadding="2" class="display compact dataTable" id="example">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Question</th>
+        <th>Tool</th>
+        <th>Model</th>
+        <th>Run date</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @responses.each do |response| -%>
+        <tr>
+          <td><%= @users[ response.user_id ] if ! @users.nil? && ! @users[ response.user_id ].nil?  %></td>
+          <td><%= @questions[ response.question_id ] %></td>
+          <td><%= @tools[ response.tool_id ] %></td>
+          <td><%= @models[ response.model_id ] %></td>
+          <td><%= response.created_at %></td>
+          <td><%= link_to "Show", response %></td>
+        </tr>
+      <% end -%>
+    </tbody>
+  </table>
+</div>

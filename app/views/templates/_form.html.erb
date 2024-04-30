@@ -1,0 +1,28 @@
+<%= form_with(model: template) do |form| %>
+  <% if template.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(template.errors.count, "error") %> prohibited this template from being saved:</h2>
+
+      <ul>
+        <% template.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <table>
+      <thead></thead>
+      <tbody>
+        <tr>
+          <td><%= form.text_area :template_text, :size => "120x8" %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

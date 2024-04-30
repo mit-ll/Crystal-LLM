@@ -1,0 +1,28 @@
+<div id="questions">
+  <table class="display compact dataTable" id="example" border="1">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th></th>
+        <th>Question</th>
+        <th></th>
+      </tr>
+    </thread>
+    <tbody>
+      <% @questions.each do |question| -%>
+        <% if selected_question.nil? || question.id != selected_question.id -%>
+          <tr>
+            <td align="center"><%= @users[ question.user_id ] %></td>
+            <td>
+               <% if ! question.chain_id.nil? -%>
+                <%= question.chain_id %>.<%= question.chain_order %>
+               <% end -%>
+            </td>
+            <td><%= question.query_text %></td>
+            <td><%= link_to "Show", question %>
+          </tr>
+        <% end -%>
+      <% end -%>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,21 @@
+<div>
+  <table border="2">
+    <thead>
+      <tr>
+        <th>Tool</th>
+        <th>Model</th>
+        <th>Created at</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr align="center">
+        <td><%= @tools[ response.tool_id ] if ! @tools.nil? %></td>
+        <td><%= @model_names[ response.model_id ] %></td>
+        <td><%= response.created_at %></td>
+    </tr>
+    </tbody>
+  </table>
+  <pre>
+  <%= response.response_text %>
+  </pre>
+</div>

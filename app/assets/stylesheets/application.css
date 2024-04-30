@@ -1,0 +1,73 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require jquery-ui
+ *= require jquery-ui/core
+ *  require jquery-ui/overcast
+ *= require jquery-ui/theme
+ *  require fullcalendar
+ *= require jquery.fileupload-ui
+ *= require dataTables/jquery.dataTables
+ *= require_tree .
+ *= require_self
+ */
+
+
+#conservation-slider{
+    width: 600px;
+}
+
+.ui-icon, .ui-widget-content .ui-icon {
+        background-image: none;
+}
+
+/* general */
+.center { width: 50%; margin: 0 auto; }
+.drug_container { width: 95%; margin: 0 auto; }
+
+.actions a {
+  padding: 5px;
+}
+
+.actions a, .actions input,
+.actions .button_to button {
+  background-color: #9c1e46;
+  border-radius: 8px; -moz-border-radius: 8px; -webkit-border-radius: 8px; -o-border-radius: 8px; -ms-border-radius: 8px; border:none;
+  color:#FFFFFF; height:20px; font-size:.9em; /* width:220px; */
+  margin-top: 20px; margin-bottom: 20px; cursor: pointer;
+}
+
+.actions a:hover, .actions input:hover { color: #d2d044;}
+
+.table_caption { text-align: center; color: #9c1e46; font-weight: bold; }
+
+.alert, .alert button { color: #9c1e46; }
+
+.redtext { color: red; }
+.greentext { color: green; }
+.app_bcolor_text { color: #9c1e46; font-weight: bold; }
+
+table {
+  border-spacing: 2;
+  width: 99%;
+  margin: 5 auto;
+  padding-left: 5px;
+}
+
+th {
+  text-align: center;
+  background-color: #d3d3d3;
+}
+
+td {
+  padding: 0 5px 0 5px;
+}
+
+tr:nth-child(even) { background-color: #f2f2f2; }

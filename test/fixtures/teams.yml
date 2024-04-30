@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team_name: MyString
+  agent_id: MyString
+  score: 1.5
+  last_access: 2023-10-17 10:07:23
+  last_upload: 2023-10-17 10:07:23
+
+two:
+  team_name: MyString
+  agent_id: MyString
+  score: 1.5
+  last_access: 2023-10-17 10:07:23
+  last_upload: 2023-10-17 10:07:23

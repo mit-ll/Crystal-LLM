@@ -1,0 +1,43 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team_id: 1
+  scenario_id: 1
+  closest_approach_time: 9.99
+  closest_approach_speed: 9.99
+  bandit_guard_closest_approach: 9.99
+  lady_guard_closest_approach: 9.99
+  minimum_position_velocity_product: 9.99
+  pursuer_fuel_usage: 9.99
+  evader_fuel_usage: 9.99
+  guard_fuel_usage: 9.99
+  expected_deltav_at_final_time: 9.99
+  cumulative_sun_blocking_reward: 9.99
+  maximum_sun_blocking_reward: 9.99
+  minimum_sun_blocking_reward: 9.99
+  elapsed_time: 2023-10-17 10:07:26
+  weighted_score: 1.5
+  kspdg_version: MyString
+  quasi_checksum: 1
+  created_at: 2023-10-17 10:07:26
+
+two:
+  team_id: 1
+  scenario_id: 1
+  closest_approach_time: 9.99
+  closest_approach_speed: 9.99
+  bandit_guard_closest_approach: 9.99
+  lady_guard_closest_approach: 9.99
+  minimum_position_velocity_product: 9.99
+  pursuer_fuel_usage: 9.99
+  evader_fuel_usage: 9.99
+  guard_fuel_usage: 9.99
+  expected_deltav_at_final_time: 9.99
+  cumulative_sun_blocking_reward: 9.99
+  maximum_sun_blocking_reward: 9.99
+  minimum_sun_blocking_reward: 9.99
+  elapsed_time: 2023-10-17 10:07:26
+  weighted_score: 1.5
+  kspdg_version: MyString
+  quasi_checksum: 1
+  created_at: 2023-10-17 10:07:26

@@ -1,0 +1,74 @@
+<%= form_with(model: model) do |form| %>
+  <% if model.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(model.errors.count, "error") %> prohibited this model from being saved:</h2>
+
+      <ul>
+        <% model.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end -%>
+      </ul>
+    </div>
+  <% end -%>
+
+  <table>
+    <thead></thead>
+    <tbody>
+      <tr>
+        <div>
+          <td>LLM</td>
+          <td><%= collection_select :tool, :tool, @tools, :id, :tool_name, prompt: "Select LLM", :selected => model.tool_id %></td>
+        </div>
+      </tr><tr>
+        <div>
+          <td>LLM Model display name</td>
+          <td><%= form.text_field :modelname %></td>
+        </div>
+      </tr><tr>
+        <div>
+          <td><%= form.label :model_version, style: "display: block" %></td>
+          <td><%= form.text_field :model_version %></td>
+        </div>
+      </tr><tr>
+        <div>
+          <td><%= form.label :group_name, style: "display: block" %></td>
+          <td><%= form.text_field :group_name %></td>
+        </div>
+      </tr><tr>
+        <div>
+          <td><%= form.label :host_name, style: "display: block" %></td>
+          <td><%= form.text_field :host_name %></td>
+        </div>
+      </tr><tr>
+        <div>
+          <td><%= form.label :host_port, style: "display: block" %></td>
+          <td><%= form.text_field :host_port %></td>
+        </div>
+      </tr><tr>
+        <div>
+          <td><%= form.label :has_curl, style: "display: block" %></td>
+          <td><%= form.check_box :has_curl %></td>
+        </div>
+      </tr><tr>
+        <div>
+          <td><%= form.label :has_singularity, style: "display: block" %></td>
+          <td><%= form.check_box :has_singularity %></td>
+        </div>
+      </tr><tr>
+        <div>
+          <td><%= form.label :has_docker, style: "display: block" %></td>
+          <td><%= form.check_box :has_docker %></td>
+        </div>
+      </tr><tr>
+        <div>
+          <td><%= form.label :is_up, style: "display: block" %></td>
+          <td><%= form.check_box :is_up %></td>
+        </div>
+      </tr>
+    </tbody>
+  </table>
+<br/>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

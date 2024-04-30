@@ -1,0 +1,40 @@
+<div id="<%= dom_id model %>">
+
+<table>
+  <thead></thead>
+  <tbody>
+  <tr>
+    <td>Tool:</td>
+    <td><%= @tool.tool_name if ! @tool.nil? %></td>
+  </tr><tr>
+    <td>Modelname:</td>
+    <td><%= model.modelname %></td>
+  </tr><tr>
+    <td>Model version:</td>
+    <td><%= model.model_version %></td>
+  </tr><tr>
+    <td>Group name:</td>
+    <td><%= model.group_name %></td>
+  </tr><tr>
+    <td>Host name:</td>
+    <td><%= model.host_name %></td>
+  </tr><tr>
+    <td>Host port:</td>
+    <td><%= model.host_port %></td>
+  </tr><tr>
+    <td>Curl interface:</td>
+    <td><%= model.has_curl %></td>
+  </tr><tr>
+    <td>Singularity interface:</td>
+    <td><%= model.has_singularity %></td>
+  </tr><tr>
+    <td>Docker interface:</td>
+    <td><%= model.has_docker %></td>
+  </tr><tr>
+    <td>Is up:</td>
+    <td><%= model.is_up %></td>
+  </tr>
+  </tbody>
+</table>
+<br/>
+</div>
