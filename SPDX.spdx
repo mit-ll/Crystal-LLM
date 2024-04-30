@@ -1,0 +1,6 @@
+SPDXVersion: SPDX-2.1
+    PackageName: Crystal-LLM
+    PackageHomePage: https://github.com/mit-ll/Crystal-LLM
+    PackageOriginator: MIT Lincoln Laboratory
+    PackageCopyrightText: 2024 Massachusetts Institute of Technology
+    PackageLicenseDeclared: GPL-2.0-only
