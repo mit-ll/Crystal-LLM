@@ -54,11 +54,6 @@ From: nvidia/cuda:11.8.0-cudnn8-runtime-ubuntu22.04
   crystal_llm.tar /S
 
 %post
-  export HTTP_PROXY="http://llproxy.llan.ll.mit.edu:8080"
-  export HTTPS_PROXY="http://llproxy.llan.ll.mit.edu:8080"
-  export FTP_PROXY="http://llproxy.llan.ll.mit.edu:8080"
-  export no_proxy=.ll.mit.edu,.mit.edu,localhost,127.0.0.1,0.0.0.0
-
   export DEBIAN_FRONTEND=noninteractive
 
   apt-get update
@@ -107,11 +102,6 @@ From: nvidia/cuda:11.8.0-cudnn8-runtime-ubuntu22.04
 
 %environment
   export DEBIAN_FRONTEND=noninterative
-
-  export HTTP_PROXY="http://llproxy.llan.ll.mit.edu:8080"
-  export HTTPS_PROXY="http://llproxy.llan.ll.mit.edu:8080"
-  export FTP_PROXY="http://llproxy.llan.ll.mit.edu:8080"
-  export no_proxy=.ll.mit.edu,.mit.edu,localhost,127.0.0.1,0.0.0.0
 
 %runscript
   cd /S/crystal_llm
